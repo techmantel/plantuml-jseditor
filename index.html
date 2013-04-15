@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>PlantUML</title>
+	<title>PlantUML editor</title>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery.base64.js"></script>
+	<script type="text/javascript" src="js/rawdeflate.js"></script>
 	<script type="text/javascript" src="js/plantuml-jseditor.js"></script>
 
 	<script type="text/javascript">
-		$(document).ready();
+		$(document).ready(function(){editor.init();});
 	</script>
 
 </head>
@@ -15,6 +16,7 @@
 	<form>
 		<textarea id="code" cols="50" rows="10">Alice->Bob : hello world!</textarea>
 	</form>
+	<img id="loader" src="ajax-loader.gif" style="display: none" />	
 	<img id="diagram" src="" />
 </body>
 </html>
